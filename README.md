@@ -2,6 +2,47 @@
 
 A modern Android application built with Jetpack Compose that demonstrates user authentication, data retrieval from a remote API, offline support, search functionality, and local data persistence.
 
+## 📱 Screenshots
+
+### Light Mode
+<div align="center">
+  <img src="Demo Video and Images/LightMode1.png" alt="Light Mode 1" width="200"/>
+  <img src="Demo Video and Images/LightMode2.png" alt="Light Mode 2" width="200"/>
+  <img src="Demo Video and Images/LightMode3.png" alt="Light Mode 3" width="200"/>
+  <img src="Demo Video and Images/LightMode4.png" alt="Light Mode 4" width="200"/>
+  <img src="Demo Video and Images/LightMode5.png" alt="Light Mode 5" width="200"/>
+  <img src="Demo Video and Images/LightMode6.jpg" alt="Light Mode 6" width="200"/>
+  <img src="Demo Video and Images/LightMode7.png" alt="Light Mode 7" width="200"/>
+  <img src="Demo Video and Images/LightMode8.png" alt="Light Mode 8" width="200"/>
+</div>
+
+### Dark Mode
+<div align="center">
+  <img src="Demo Video and Images/DarkMode1.png" alt="Dark Mode 1" width="200"/>
+  <img src="Demo Video and Images/DarkMode2.png" alt="Dark Mode 2" width="200"/>
+  <img src="Demo Video and Images/DarkMode3.png" alt="Dark Mode 3" width="200"/>
+  <img src="Demo Video and Images/DarkMode4.jpg" alt="Dark Mode 4" width="200"/>
+  <img src="Demo Video and Images/DarkMode5.png" alt="Dark Mode 5" width="200"/>
+</div>
+
+### Demo Video
+[![TechnoNext Demo Video](Demo Video and Images/TechnoNext Assignement.mp4)](Demo Video and Images/TechnoNext Assignement.mp4)
+
+*Click the video above to watch the complete app demonstration*
+
+> **Note**: The demo video showcases the complete user journey from registration to exploring posts, searching, and managing favorites in both light and dark themes.
+
+## 🎯 Key Features
+
+
+
+### Theme Switching
+<div align="center">
+  <img src="Demo Video and Images/LightMode8.png" alt="Theme Toggle" width="250"/>
+  <span style="font-size: 24px;">→</span>
+  <img src="Demo Video and Images/DarkMode3.png" alt="Dark Mode" width="250"/>
+</div>
+
 ## Features
 
 ### 🔐 User Authentication
@@ -32,6 +73,12 @@ A modern Android application built with Jetpack Compose that demonstrates user a
 - Search functionality works offline
 - Favorites management available offline
 - Automatic data synchronization when online
+
+### 🎨 Theme Support
+- Light and Dark mode support
+- Theme toggle in settings
+- Persistent theme preference
+- Material Design 3 theming
 
 ## Technical Architecture
 
@@ -377,7 +424,7 @@ No environment variables required for basic functionality. The app uses:
 
 ## Future Enhancements
 
-- [ ] Dark mode support
+- [x] Dark mode support ✅
 - [ ] Unit tests for ViewModels
 - [ ] UI tests with Compose Test APIs
 - [ ] User profile management
@@ -385,6 +432,10 @@ No environment variables required for basic functionality. The app uses:
 - [ ] Social features (comments, likes)
 - [ ] Push notifications
 - [ ] Data export/import
+- [ ] Biometric authentication
+- [ ] Advanced search filters
+- [ ] Post sharing functionality
+- [ ] Offline data synchronization
 
 ## Contributing
 
