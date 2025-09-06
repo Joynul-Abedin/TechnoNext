@@ -425,8 +425,8 @@ No environment variables required for basic functionality. The app uses:
 ## Future Enhancements
 
 - [x] Dark mode support ✅
-- [ ] Unit tests for ViewModels
-- [ ] UI tests with Compose Test APIs
+- [ ] Unit tests for ViewModels ✅
+- [ ] UI tests with Compose Test APIs ✅
 - [ ] User profile management
 - [ ] Post creation and editing
 - [ ] Social features (comments, likes)
