@@ -24,7 +24,7 @@ data class AuthUiState(
 )
 
 @HiltViewModel
-class AuthViewModel @Inject constructor(
+open class AuthViewModel @Inject constructor(
     private val authRepository: AuthRepository,
     private val userPreferences: UserPreferences
 ) : ViewModel() {
@@ -137,7 +137,7 @@ class AuthViewModel @Inject constructor(
         return PasswordValidator.getPasswordStrength(password)
     }
     
-    private fun isValidEmail(email: String): Boolean {
+    open fun isValidEmail(email: String): Boolean {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 }

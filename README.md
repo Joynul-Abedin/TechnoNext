@@ -193,7 +193,3 @@ app/src/main/java/com/shokal/technonext/
 ## License
 
 This project is created for demonstration purposes.
-
----
-
-**Built with ❤️ using Jetpack Compose and Modern Android Development practices**

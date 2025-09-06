@@ -17,7 +17,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.shokal.technonext.TestRunner"
         
         // Room schema export
         ksp {
@@ -43,6 +43,19 @@ android {
     }
     buildFeatures {
         compose = true
+    }
+    
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+        animationsDisabled = true
+    }
+    
+    packaging {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
     }
 }
 
@@ -102,11 +115,45 @@ dependencies {
     // Pull to refresh
     implementation("androidx.compose.material:material:1.7.0")
 
+    // Unit Testing
     testImplementation(libs.junit)
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
+    testImplementation("org.mockito:mockito-core:5.8.0")
+    testImplementation("org.mockito.kotlin:mockito-kotlin:5.2.1")
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
+    testImplementation("io.mockk:mockk:1.13.8")
+    testImplementation("app.cash.turbine:turbine:1.0.0")
+    
+    // Hilt Testing
+    testImplementation("com.google.dagger:hilt-android-testing:2.51.1")
+    kspTest("com.google.dagger:hilt-compiler:2.51.1")
+    
+    // Android Instrumented Testing
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
+    androidTestImplementation("androidx.test:runner:1.5.2")
+    androidTestImplementation("androidx.test:rules:1.5.0")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.uiautomator:uiautomator:2.2.0")
+    
+    // Compose Testing
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+    androidTestImplementation("androidx.compose.ui:ui-test-manifest")
+    androidTestImplementation("androidx.navigation:navigation-testing:2.7.6")
+    androidTestImplementation("androidx.hilt:hilt-navigation-testing:1.1.0")
+    
+    // Room Testing
+    androidTestImplementation("androidx.room:room-testing:2.6.1")
+    
+    // Hilt Android Testing
+    androidTestImplementation("com.google.dagger:hilt-android-testing:2.51.1")
+    kspAndroidTest("com.google.dagger:hilt-compiler:2.51.1")
+    
+    // Debug implementations
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    debugImplementation("androidx.compose.ui:ui-test-manifest")
+    testImplementation(kotlin("test"))
 }
